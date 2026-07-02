@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore MAISON DE PARFUM: a high-fidelity luxury perfume storefront showcase built by Hungry Webs.">
+  <title>Maison de Parfum - Luxury E-Commerce Showcase | Hungry Webs</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ecom.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span>Hungry</span>Webs
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">E-Commerce ↓</a>
+          <div class="nav-dropdown">
+            <a href="tshirt.html" class="nav-dropdown-link">T-Shirt Store</a>
+            <a href="iphone.html" class="nav-dropdown-link">iPhone Reseller</a>
+            <a href="perfume.html" class="nav-dropdown-link">Perfume Boutique</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">Showcases ↓</a>
+          <div class="nav-dropdown">
+            <a href="salon.html" class="nav-dropdown-link">Salon Booking</a>
+            <a href="event.html" class="nav-dropdown-link">Event Tickets</a>
+            <a href="business.html" class="nav-dropdown-link">Corporate Company</a>
+            <a href="portfolio.html" class="nav-dropdown-link">Personal Brand</a>
+          </div>
+        </div>
+        <a href="checkout.html" class="nav-link">Checkout</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-cart-btn" id="navCartBtn" title="View Cart">
+          🛒
+          <span class="nav-cart-count" style="display: none;">0</span>
+        </a>
+        <div class="hamburger" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Showcase Info Banner -->
+  <div style="background: rgba(245, 158, 11, 0.1); border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding: 12px 0; text-align: center; font-size: 0.85rem; margin-top: var(--nav-height);">
+    <div class="container">
+      💡 <strong>DEMO SHIELD:</strong> This is a client-side mockup of a luxury boutique built by <strong>Hungry Webs</strong>. Try adding scents to your cart!
+    </div>
+  </div>
+
+  <!-- Shop Header -->
+  <section class="ecom-shop-header" style="padding-top: 60px;">
+    <div class="container">
+      <div class="ecom-shop-brand-name text-gradient-gold">MAISON DE PARFUM</div>
+      <div class="ecom-shop-tagline" style="font-family: var(--font-heading); font-style: italic; letter-spacing: 0.15em;">Artisanal Haute Parfumerie</div>
+    </div>
+  </section>
+
+  <!-- Product Catalog Grid -->
+  <section class="container">
+    <div class="product-grid" id="perfumeGrid">
+      
+      <!-- Product Item 1: Nocturnal Oud -->
+      <div class="product-card perfume-card" id="p-perfume-oud">
+        <div class="product-img-box" style="display: flex; align-items: center; justify-content: center; background: #0E0A06; position: relative;">
+          <span class="perfume-tag">Intense</span>
+          <!-- SVG Illustration of Luxury Oud Perfume -->
+          <svg viewBox="0 0 200 200" style="width: 130px; height: 130px;">
+            <defs>
+              <linearGradient id="liquidGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE082" />
+                <stop offset="50%" stop-color="#D97706" />
+                <stop offset="100%" stop-color="#78350F" />
+              </linearGradient>
+            </defs>
+            <!-- Cap -->
+            <rect x="85" y="25" width="30" height="20" rx="3" fill="#D97706" />
+            <line x1="85" y1="35" x2="115" y2="35" stroke="#78350F" stroke-width="1.5" />
+            <!-- Neck -->
+            <rect x="92" y="45" width="16" height="10" fill="#1C1917" />
+            <!-- Bottle Body -->
+            <rect x="60" y="55" width="80" height="110" rx="14" fill="url(#liquidGrad1)" stroke="#F59E0B" stroke-width="2" />
+            <!-- Label -->
+            <rect x="75" y="85" width="50" height="40" rx="3" fill="#1C1917" stroke="#F59E0B" stroke-width="1" />
+            <text x="100" y="102" fill="#F59E0B" font-family="Outfit" font-size="7" font-weight="700" text-anchor="middle" letter-spacing="1">NOCTURNAL</text>
+            <text x="100" y="115" fill="#FFE082" font-family="Outfit" font-size="10" font-weight="800" text-anchor="middle" letter-spacing="2">OUD</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-title" style="font-family: var(--font-heading); font-weight: 500;">Nocturnal Oud Eau de Parfum</div>
+          <p class="perfume-scent-desc">Notes: Smoky Wood, Warm Amber, Honey, Mysterious Spices.</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; flex-grow: 1;">A deep, nocturnal fragrance capturing the warm, resinous mystique of rich agarwood balanced with golden honeycomb.</p>
+          
+          <div class="product-sizes" style="margin-bottom: 16px;">
+            <button class="size-btn active" data-price="1250" onclick="updatePerfumePrice(this, 'perfume-oud')">50ml</button>
+            <button class="size-btn" data-price="1950" onclick="updatePerfumePrice(this, 'perfume-oud')">100ml</button>
+          </div>
+          
+          <div class="product-price-row">
+            <span class="product-price perfume-price" id="price-perfume-oud">R1,250.00</span>
+          </div>
+
+          <button class="btn btn-gold btn-add-cart" style="width:100%;" onclick="triggerAddToCart('perfume-oud', 'Nocturnal Oud EDP', 'perfume')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Item 2: Rose Imperial -->
+      <div class="product-card perfume-card" id="p-perfume-rose">
+        <div class="product-img-box" style="display: flex; align-items: center; justify-content: center; background: #0E0A06; position: relative;">
+          <span class="perfume-tag">Floral</span>
+          <!-- SVG Illustration of Luxury Rose Perfume -->
+          <svg viewBox="0 0 200 200" style="width: 130px; height: 130px;">
+            <defs>
+              <linearGradient id="liquidGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FBCFE8" />
+                <stop offset="50%" stop-color="#F43F5E" />
+                <stop offset="100%" stop-color="#9F1239" />
+              </linearGradient>
+            </defs>
+            <!-- Cap -->
+            <circle cx="100" cy="35" r="14" fill="#D97706" />
+            <!-- Neck -->
+            <rect x="94" y="45" width="12" height="10" fill="#1C1917" />
+            <!-- Bottle Body -->
+            <rect x="65" y="55" width="70" height="110" rx="20" fill="url(#liquidGrad2)" stroke="#F59E0B" stroke-width="2" />
+            <!-- Label -->
+            <rect x="75" y="90" width="50" height="35" rx="2" fill="#1C1917" stroke="#FBCFE8" stroke-width="1" />
+            <text x="100" y="105" fill="#FBCFE8" font-family="Outfit" font-size="7" font-weight="700" text-anchor="middle" letter-spacing="1">ROSE</text>
+            <text x="100" y="116" fill="#F43F5E" font-family="Outfit" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="1.5">IMPERIAL</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-title" style="font-family: var(--font-heading); font-weight: 500;">Rose Imperial Eau de Parfum</div>
+          <p class="perfume-scent-desc">Notes: Damask Rose, Bergamot, Pink Pepper, White Musk.</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; flex-grow: 1;">A radiant floral symphony. Damask rose petals spiked with fresh citrus and warm, spicy pink peppercorns.</p>
+          
+          <div class="product-sizes" style="margin-bottom: 16px;">
+            <button class="size-btn active" data-price="1100" onclick="updatePerfumePrice(this, 'perfume-rose')">50ml</button>
+            <button class="size-btn" data-price="1700" onclick="updatePerfumePrice(this, 'perfume-rose')">100ml</button>
+          </div>
+          
+          <div class="product-price-row">
+            <span class="product-price perfume-price" id="price-perfume-rose">R1,100.00</span>
+          </div>
+
+          <button class="btn btn-gold btn-add-cart" style="width:100%;" onclick="triggerAddToCart('perfume-rose', 'Rose Imperial EDP', 'perfume')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Item 3: Velvet Musk -->
+      <div class="product-card perfume-card" id="p-perfume-musk">
+        <div class="product-img-box" style="display: flex; align-items: center; justify-content: center; background: #0E0A06; position: relative;">
+          <span class="perfume-tag">Soft</span>
+          <!-- SVG Illustration of Luxury Musk Perfume -->
+          <svg viewBox="0 0 200 200" style="width: 130px; height: 130px;">
+            <defs>
+              <linearGradient id="liquidGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ECE9E6" />
+                <stop offset="100%" stop-color="#E2D4C9" />
+              </linearGradient>
+            </defs>
+            <!-- Cap -->
+            <rect x="75" y="28" width="50" height="15" rx="2" fill="#D97706" />
+            <!-- Neck -->
+            <rect x="93" y="43" width="14" height="12" fill="#1C1917" />
+            <!-- Bottle Body -->
+            <rect x="58" y="55" width="84" height="110" rx="8" fill="url(#liquidGrad3)" stroke="#F59E0B" stroke-width="2" />
+            <!-- Label -->
+            <rect x="72" y="85" width="56" height="40" rx="2" fill="#1C1917" stroke="#D97706" stroke-width="1" />
+            <text x="100" y="102" fill="#FFE082" font-family="Outfit" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1">VELVET</text>
+            <text x="100" y="115" fill="#D97706" font-family="Outfit" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="2">MUSK</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-title" style="font-family: var(--font-heading); font-weight: 500;">Velvet Musk Eau de Parfum</div>
+          <p class="perfume-scent-desc">Notes: Clean Cotton, Creamy Sandalwood, Jasmine, Iris.</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; flex-grow: 1;">A soft, second-skin aroma. Creamy sandalwood enveloped in iris blossoms and clean white musks.</p>
+          
+          <div class="product-sizes" style="margin-bottom: 16px;">
+            <button class="size-btn active" data-price="950" onclick="updatePerfumePrice(this, 'perfume-musk')">50ml</button>
+            <button class="size-btn" data-price="1550" onclick="updatePerfumePrice(this, 'perfume-musk')">100ml</button>
+          </div>
+          
+          <div class="product-price-row">
+            <span class="product-price perfume-price" id="price-perfume-musk">R950.00</span>
+          </div>
+
+          <button class="btn btn-gold btn-add-cart" style="width:100%;" onclick="triggerAddToCart('perfume-musk', 'Velvet Musk EDP', 'perfume')">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Global CTA Banner -->
+  <section class="global-cta-section">
+    <div class="container global-cta-content">
+      <h2>Need a Website Like This?</h2>
+      <p>We build professional, responsive, and high-converting websites for businesses. Let's work together to grow your digital presence.</p>
+      <div class="global-cta-buttons">
+        <a href="https://wa.me/27713465684" target="_blank" class="btn btn-primary">💬 Contact on WhatsApp</a>
+        <a href="business.html#contact" class="btn btn-secondary">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-block;">
+          <span>Hungry</span>Webs
+        </a>
+        <p>Premium web development agency designing and building state-of-the-art websites that drive sales, scale brands, and wow clients.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">FB</a>
+          <a href="#" class="footer-social-btn">IG</a>
+          <a href="#" class="footer-social-btn">TW</a>
+          <a href="#" class="footer-social-btn">LN</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="tshirt.html">E-Commerce Stores</a></li>
+          <li><a href="salon.html">Booking Calendars</a></li>
+          <li><a href="business.html">Corporate Consulting</a></li>
+          <li><a href="portfolio.html">Personal Portfolios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Examples</h4>
+        <ul class="footer-links">
+          <li><a href="iphone.html">iStore Reseller</a></li>
+          <li><a href="perfume.html">Perfume Boutique</a></li>
+          <li><a href="event.html">Event Tickets</a></li>
+          <li><a href="checkout.html">Checkout Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-contact">
+          <li>📧 hungrydevelopments@gmail.com</li>
+          <li>📱 0713465684 (WhatsApp)</li>
+          <li>📍 South Africa, Remote</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Hungry Webs. All rights reserved.</p>
+      <p>Made for showcase purposes.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/27713465684" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-drawer-close" id="closeCartDrawer">&times;</button>
+    </div>
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      <!-- Dynamically filled by main.js -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-drawer-total">
+        <span>Subtotal:</span>
+        <span id="cartDrawerSubtotal">R0.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Proceed to Checkout</a>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Shared Javascript -->
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Page Specific Logic -->
+  <script>
+    // Size and Price updates
+    function updatePerfumePrice(element, id) {
+      const container = element.parentElement;
+      const sizeBtns = container.querySelectorAll('.size-btn');
+      sizeBtns.forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+
+      const price = element.dataset.price;
+      const priceLabel = document.getElementById(`price-${id}`);
+      if (priceLabel) {
+        priceLabel.textContent = `R${parseInt(price).toLocaleString('en-ZA')}.00`;
+      }
+    }
+
+    // Add to Cart
+    function triggerAddToCart(id, name, source) {
+      const card = document.getElementById(`p-${id}`);
+      
+      const activeSize = card.querySelector('.size-btn.active');
+      const sizeVal = activeSize ? activeSize.textContent : '50ml';
+      const priceVal = activeSize ? parseFloat(activeSize.dataset.price) : 0;
+      
+      addToCart({
+        id: `${id}-${sizeVal.toLowerCase()}`,
+        name: `${name} ${sizeVal}`,
+        price: priceVal,
+        image: '',
+        variant: sizeVal,
+        qty: 1,
+        source: source
+      });
+      
+      setTimeout(() => {
+        openCartDrawer();
+      }, 500);
+    }
+  </script>
+</body>
+</html>

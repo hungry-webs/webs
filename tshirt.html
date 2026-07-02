@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore APEX APPAREL: a high-fidelity streetwear boutique showcase built by Hungry Webs.">
+  <title>Apex Apparel Streetwear - E-Commerce Showcase | Hungry Webs</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ecom.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span>Hungry</span>Webs
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">E-Commerce ↓</a>
+          <div class="nav-dropdown">
+            <a href="tshirt.html" class="nav-dropdown-link">T-Shirt Store</a>
+            <a href="iphone.html" class="nav-dropdown-link">iPhone Reseller</a>
+            <a href="perfume.html" class="nav-dropdown-link">Perfume Boutique</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">Showcases ↓</a>
+          <div class="nav-dropdown">
+            <a href="salon.html" class="nav-dropdown-link">Salon Booking</a>
+            <a href="event.html" class="nav-dropdown-link">Event Tickets</a>
+            <a href="business.html" class="nav-dropdown-link">Corporate Company</a>
+            <a href="portfolio.html" class="nav-dropdown-link">Personal Brand</a>
+          </div>
+        </div>
+        <a href="checkout.html" class="nav-link">Checkout</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-cart-btn" id="navCartBtn" title="View Cart">
+          🛒
+          <span class="nav-cart-count" style="display: none;">0</span>
+        </a>
+        <div class="hamburger" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Showcase Info Banner -->
+  <div style="background: rgba(139, 92, 246, 0.1); border-bottom: 1px solid var(--border-light); padding: 12px 0; text-align: center; font-size: 0.85rem; margin-top: var(--nav-height);">
+    <div class="container">
+      💡 <strong>DEMO SHIELD:</strong> This is a client-side mockup of an apparel store built by <strong>Hungry Webs</strong>. Try adding items and checking out!
+    </div>
+  </div>
+
+  <!-- Shop Header -->
+  <section class="ecom-shop-header" style="padding-top: 60px;">
+    <div class="container">
+      <div class="ecom-shop-brand-name text-gradient">APEX APPAREL</div>
+      <div class="ecom-shop-tagline">Curated Streetwear & High-End Urban Fashion</div>
+      
+      <!-- Filter Bar -->
+      <div class="ecom-filter-bar">
+        <button class="filter-btn active" onclick="filterProducts('all')">All Products</button>
+        <button class="filter-btn" onclick="filterProducts('tees')">T-Shirts</button>
+        <button class="filter-btn" onclick="filterProducts('hoodies')">Hoodies</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog Grid -->
+  <section class="container">
+    <div class="product-grid" id="productGrid">
+      
+      <!-- Product Item 1: Vaporwave Tee -->
+      <div class="product-card" data-category="tees" id="p-tshirt-1">
+        <div class="product-img-box">
+          <img src="images/tshirt-1.png" alt="Vaporwave Dreamscape Tee">
+        </div>
+        <div class="product-info">
+          <div class="product-title">Vaporwave Dreamscape Tee</div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; flex-grow: 1;">Premium black heavy cotton tee featuring a glowing Tokyo 198X sunset grid design.</p>
+          <div class="product-price-row">
+            <span class="product-price">R299.00</span>
+          </div>
+          <div class="product-sizes">
+            <button class="size-btn active" onclick="selectSize(this)">S</button>
+            <button class="size-btn" onclick="selectSize(this)">M</button>
+            <button class="size-btn" onclick="selectSize(this)">L</button>
+            <button class="size-btn" onclick="selectSize(this)">XL</button>
+          </div>
+          <button class="btn btn-primary btn-add-cart" onclick="triggerAddToCart('tshirt-1', 'Vaporwave Dreamscape Tee', 299.00, 'images/tshirt-1.png', 'tshirt')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Item 2: Neo-Cybernetics Tee -->
+      <div class="product-card" data-category="tees" id="p-tshirt-2">
+        <div class="product-img-box">
+          <img src="images/tshirt-2.png" alt="Neo-Cybernetics Heavy Tee">
+        </div>
+        <div class="product-info">
+          <div class="product-title">Neo-Cybernetics Heavy Tee</div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; flex-grow: 1;">Structured heavy knit tee with detailed techwear cybernetics schematic chest print.</p>
+          <div class="product-price-row">
+            <span class="product-price">R349.00</span>
+          </div>
+          <div class="product-sizes">
+            <button class="size-btn" onclick="selectSize(this)">S</button>
+            <button class="size-btn active" onclick="selectSize(this)">M</button>
+            <button class="size-btn" onclick="selectSize(this)">L</button>
+            <button class="size-btn" onclick="selectSize(this)">XL</button>
+          </div>
+          <button class="btn btn-primary btn-add-cart" onclick="triggerAddToCart('tshirt-2', 'Neo-Cybernetics Heavy Tee', 349.00, 'images/tshirt-2.png', 'tshirt')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Item 3: Cyber-Gear Graphic Tee -->
+      <div class="product-card" data-category="tees" id="p-tshirt-3">
+        <div class="product-img-box">
+          <img src="images/tshirt-2.png" alt="Cyber-Gear Graphic Tee" style="filter: hue-rotate(180deg);">
+        </div>
+        <div class="product-info">
+          <div class="product-title">Cyber-Gear Graphic Tee</div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; flex-grow: 1;">Vibrant neon red accent chest graphic. Heavy fabric, robust styling, and oversized cut.</p>
+          <div class="product-price-row">
+            <span class="product-price">R280.00</span>
+          </div>
+          <div class="product-sizes">
+            <button class="size-btn" onclick="selectSize(this)">S</button>
+            <button class="size-btn" onclick="selectSize(this)">M</button>
+            <button class="size-btn active" onclick="selectSize(this)">L</button>
+            <button class="size-btn" onclick="selectSize(this)">XL</button>
+          </div>
+          <button class="btn btn-primary btn-add-cart" onclick="triggerAddToCart('tshirt-3', 'Cyber-Gear Graphic Tee', 280.00, 'images/tshirt-2.png', 'tshirt')">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Item 4: Apex Streetwear Hoodie (Interactive SVG) -->
+      <div class="product-card" data-category="hoodies" id="p-tshirt-4">
+        <div class="product-img-box" style="display: flex; align-items: center; justify-content: center; background: #151026;">
+          <!-- Inline Hoodie SVG -->
+          <svg viewBox="0 0 200 200" style="width: 150px; height: 150px;">
+            <defs>
+              <linearGradient id="hoodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8B5CF6" />
+                <stop offset="100%" stop-color="#7C3AED" />
+              </linearGradient>
+            </defs>
+            <path d="M 60,60 L 140,60 L 155,100 L 135,100 L 130,160 L 70,160 L 65,100 L 45,100 Z" fill="url(#hoodGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+            <!-- Hood -->
+            <path d="M 70,60 C 70,25 130,25 130,60 Z" fill="#6D28D9" />
+            <!-- Pocket -->
+            <path d="M 80,125 L 120,125 L 125,150 L 75,150 Z" fill="#4C1D95" opacity="0.6" />
+            <!-- Drawstrings -->
+            <line x1="95" y1="60" x2="95" y2="85" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+            <line x1="105" y1="60" x2="105" y2="90" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-title">Apex Signature Hoodie</div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; flex-grow: 1;">Premium fleece hoodie with adjustable drawstrings and metallic tip details. Drop shoulder fit.</p>
+          <div class="product-price-row">
+            <span class="product-price">R499.00</span>
+          </div>
+          <div class="product-sizes">
+            <button class="size-btn" onclick="selectSize(this)">S</button>
+            <button class="size-btn" onclick="selectSize(this)">M</button>
+            <button class="size-btn" onclick="selectSize(this)">L</button>
+            <button class="size-btn active" onclick="selectSize(this)">XL</button>
+          </div>
+          <button class="btn btn-primary btn-add-cart" onclick="triggerAddToCart('tshirt-4', 'Apex Signature Hoodie', 499.00, '', 'tshirt')">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Global CTA Banner -->
+  <section class="global-cta-section">
+    <div class="container global-cta-content">
+      <h2>Need a Website Like This?</h2>
+      <p>We build professional, responsive, and high-converting websites for businesses. Let's work together to grow your digital presence.</p>
+      <div class="global-cta-buttons">
+        <a href="https://wa.me/27713465684" target="_blank" class="btn btn-primary">💬 Contact on WhatsApp</a>
+        <a href="business.html#contact" class="btn btn-secondary">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-block;">
+          <span>Hungry</span>Webs
+        </a>
+        <p>Premium web development agency designing and building state-of-the-art websites that drive sales, scale brands, and wow clients.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">FB</a>
+          <a href="#" class="footer-social-btn">IG</a>
+          <a href="#" class="footer-social-btn">TW</a>
+          <a href="#" class="footer-social-btn">LN</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="tshirt.html">E-Commerce Stores</a></li>
+          <li><a href="salon.html">Booking Calendars</a></li>
+          <li><a href="business.html">Corporate Consulting</a></li>
+          <li><a href="portfolio.html">Personal Portfolios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Examples</h4>
+        <ul class="footer-links">
+          <li><a href="iphone.html">iStore Reseller</a></li>
+          <li><a href="perfume.html">Perfume Boutique</a></li>
+          <li><a href="event.html">Event Tickets</a></li>
+          <li><a href="checkout.html">Checkout Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-contact">
+          <li>📧 hungrydevelopments@gmail.com</li>
+          <li>📱 0713465684 (WhatsApp)</li>
+          <li>📍 South Africa, Remote</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Hungry Webs. All rights reserved.</p>
+      <p>Made for showcase purposes.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/27713465684" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-drawer-close" id="closeCartDrawer">&times;</button>
+    </div>
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      <!-- Dynamically filled by main.js -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-drawer-total">
+        <span>Subtotal:</span>
+        <span id="cartDrawerSubtotal">R0.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Proceed to Checkout</a>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Shared Javascript -->
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Page Specific Logic -->
+  <script>
+    // Product Filtering
+    function filterProducts(category) {
+      // Toggle active filter button
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Size Selection
+    function selectSize(element) {
+      const container = element.parentElement;
+      const sizeBtns = container.querySelectorAll('.size-btn');
+      sizeBtns.forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+    }
+
+    // Capture product state and add to global cart
+    function triggerAddToCart(id, name, price, img, source) {
+      const card = document.getElementById(`p-${id}`);
+      const activeSizeBtn = card.querySelector('.size-btn.active');
+      const size = activeSizeBtn ? activeSizeBtn.textContent : 'M';
+      
+      addToCart({
+        id: id,
+        name: name,
+        price: price,
+        image: img,
+        variant: size,
+        qty: 1,
+        source: source
+      });
+      
+      // Open cart drawer for feedback
+      setTimeout(() => {
+        openCartDrawer();
+      }, 500);
+    }
+  </script>
+</body>
+</html>

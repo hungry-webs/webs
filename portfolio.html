@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Alex Mercer: a creative developer portfolio website showcase built by Hungry Webs.">
+  <title>Alex Mercer Portfolio - Personal Brand Showcase | Hungry Webs</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/showcase.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span>Hungry</span>Webs
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">E-Commerce ↓</a>
+          <div class="nav-dropdown">
+            <a href="tshirt.html" class="nav-dropdown-link">T-Shirt Store</a>
+            <a href="iphone.html" class="nav-dropdown-link">iPhone Reseller</a>
+            <a href="perfume.html" class="nav-dropdown-link">Perfume Boutique</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">Showcases ↓</a>
+          <div class="nav-dropdown">
+            <a href="salon.html" class="nav-dropdown-link">Salon Booking</a>
+            <a href="event.html" class="nav-dropdown-link">Event Tickets</a>
+            <a href="business.html" class="nav-dropdown-link">Corporate Company</a>
+            <a href="portfolio.html" class="nav-dropdown-link">Personal Brand</a>
+          </div>
+        </div>
+        <a href="checkout.html" class="nav-link">Checkout</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-cart-btn" id="navCartBtn" title="View Cart">
+          🛒
+          <span class="nav-cart-count" style="display: none;">0</span>
+        </a>
+        <div class="hamburger" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Showcase Info Banner -->
+  <div style="background: rgba(6, 182, 212, 0.1); border-bottom: 1px solid rgba(6, 182, 212, 0.2); padding: 12px 0; text-align: center; font-size: 0.85rem; margin-top: var(--nav-height);">
+    <div class="container">
+      💡 <strong>DEMO SHIELD:</strong> This is a client-side mockup of a personal portfolio template built by <strong>Hungry Webs</strong>. Try filtering projects or sending a message!
+    </div>
+  </div>
+
+  <!-- Portfolio Hero -->
+  <section class="portfolio-hero">
+    <div class="container">
+      <div class="portfolio-hero-img">
+        <!-- SVG Avatar placeholder -->
+        <svg viewBox="0 0 100 100" style="width: 100%; height: 100%; background: #1C1533;">
+          <defs>
+            <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#06B6D4" />
+              <stop offset="100%" stop-color="#8B5CF6" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="40" r="18" fill="url(#avatarGrad)" />
+          <path d="M 25,85 C 25,65 75,65 75,85 Z" fill="url(#avatarGrad)" />
+        </svg>
+      </div>
+      <span class="badge">Creative Full-Stack Engineer</span>
+      <h1 class="text-gradient" style="margin-top: 16px;">Alex Mercer</h1>
+      <p>Building high-performance interactive interfaces, custom web applications, and immersive digital platforms.</p>
+      <div class="hero-ctas" style="justify-content: center;">
+        <a href="#projects" class="btn btn-primary">Browse Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Projects Gallery -->
+  <section class="container" id="projects" style="margin-bottom: 80px;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2 style="font-size: 1.8rem; font-family: var(--font-heading);">Selected Works</h2>
+      
+      <div class="ecom-filter-bar" style="margin: 20px 0;">
+        <button class="filter-btn active" onclick="filterGallery('all')">All Works</button>
+        <button class="filter-btn" onclick="filterGallery('web')">Web Apps</button>
+        <button class="filter-btn" onclick="filterGallery('design')">UI Design</button>
+      </div>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Project 1 -->
+      <div class="portfolio-card" data-tag="web">
+        <div class="portfolio-card-img" style="background:#0F1424; display:flex; align-items:center; justify-content:center;">
+          <!-- SVG for project 1 -->
+          <svg viewBox="0 0 100 60" style="width:100%; height:100%;">
+            <rect x="15" y="10" width="70" height="40" rx="4" fill="#1C1533" stroke="#8B5CF6" stroke-width="1.5" />
+            <circle cx="25" cy="18" r="2" fill="#EF4444" />
+            <circle cx="31" cy="18" r="2" fill="#F59E0B" />
+            <circle cx="37" cy="18" r="2" fill="#10B981" />
+            <line x1="20" y1="28" x2="80" y2="28" stroke="#8B5CF6" stroke-width="2" />
+            <line x1="20" y1="36" x2="60" y2="36" stroke="#06B6D4" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="portfolio-card-content">
+          <h3>Cryptocurrency Trading Dashboard</h3>
+          <p>Real-time analytics engine, WebSockets integration, and interactive lightcharts setup.</p>
+          <span class="badge">WebSockets</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="portfolio-card" data-tag="design">
+        <div class="portfolio-card-img" style="background:#130924; display:flex; align-items:center; justify-content:center;">
+          <!-- SVG for project 2 -->
+          <svg viewBox="0 0 100 60" style="width:100%; height:100%;">
+            <!-- Mobile device -->
+            <rect x="38" y="8" width="24" height="44" rx="4" fill="#0D0A1B" stroke="#06B6D4" stroke-width="1.5" />
+            <circle cx="50" cy="48" r="2" fill="#06B6D4" />
+            <!-- Graphic content inside mobile -->
+            <rect x="42" y="15" width="16" height="4" rx="1" fill="#8B5CF6" />
+            <circle cx="50" cy="28" r="5" fill="#06B6D4" />
+          </svg>
+        </div>
+        <div class="portfolio-card-content">
+          <h3>SmartHome iOS Application UI</h3>
+          <p>Glassmorphic design system layouts, dark mode switches, and vector automation icons.</p>
+          <span class="badge badge-accent">Figma Design</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="portfolio-card" data-tag="web">
+        <div class="portfolio-card-img" style="background:#091924; display:flex; align-items:center; justify-content:center;">
+          <!-- SVG for project 3 -->
+          <svg viewBox="0 0 100 60" style="width:100%; height:100%;">
+            <rect x="15" y="10" width="70" height="40" rx="4" fill="#0D0A1B" stroke="#06B6D4" stroke-width="1.5" />
+            <!-- Graph bar illustration -->
+            <rect x="25" y="35" width="8" height="10" fill="#8B5CF6" />
+            <rect x="38" y="25" width="8" height="20" fill="#06B6D4" />
+            <rect x="51" y="30" width="8" height="15" fill="#8B5CF6" />
+            <rect x="64" y="20" width="8" height="25" fill="#06B6D4" />
+          </svg>
+        </div>
+        <div class="portfolio-card-content">
+          <h3>Client CRM & Invoice Platform</h3>
+          <p>Automated PDF billing compilers, tax calculators, and database structures.</p>
+          <span class="badge badge-secondary">Full-Stack</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Progress Section -->
+  <section class="container" style="margin-bottom: 80px;">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h2 style="font-size: 1.8rem; font-family: var(--font-heading);">Technical Capabilities</h2>
+      <p style="color: var(--text-muted); max-width: 500px; margin: 8px auto 0;">Representing core technologies used in production systems.</p>
+    </div>
+
+    <div class="portfolio-skills-section">
+      <div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>JavaScript / TypeScript</span>
+            <span>92%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="92%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>React.js / Next.js Frameworks</span>
+            <span>88%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="88%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Node.js / Express Server Logic</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Vanilla CSS3 & Layout Systems</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="95%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Timeline Bio -->
+  <section class="container" style="margin-bottom: 80px;">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h2 style="font-size: 1.8rem; font-family: var(--font-heading);">Professional Milestones</h2>
+      <p style="color: var(--text-muted); max-width: 500px; margin: 8px auto 0;">Highlighting past career and engineering roles.</p>
+    </div>
+
+    <div class="portfolio-timeline">
+      
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024 - Present</div>
+          <h3>Senior Developer Partner</h3>
+          <h4>Hungry Webs App Builders</h4>
+          <p>Lead engineer for bespoke customer booking integrations, SaaS products, and custom e-commerce structures.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2022 - 2024</div>
+          <h3>Front-End UI Engineer</h3>
+          <h4>Apex Finance Group</h4>
+          <p>Constructed dashboard charts, client analytics consoles, and redesigned layout speeds by 40%.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bio Contact Form -->
+  <section class="container" id="contact" style="margin-bottom: 80px; max-width: 650px;">
+    <h2 style="text-align: center; font-size: 1.8rem; font-family: var(--font-heading); margin-bottom: 24px;">Send a Direct Message</h2>
+    <div class="card-glass">
+      <form id="portfolioContactForm">
+        <div class="contact-form-group">
+          <label for="portName">Name</label>
+          <input type="text" class="contact-input" id="portName" required placeholder="e.g. Elvis Presley">
+        </div>
+        <div class="contact-form-group">
+          <label for="portEmail">Email</label>
+          <input type="email" class="contact-input" id="portEmail" required placeholder="e.g. elvis@gmail.com">
+        </div>
+        <div class="contact-form-group">
+          <label for="portMsg">Message</label>
+          <textarea class="contact-input" id="portMsg" rows="4" required placeholder="Let's build something..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Global CTA Banner -->
+  <section class="global-cta-section">
+    <div class="container global-cta-content">
+      <h2>Need a Website Like This?</h2>
+      <p>We build professional, responsive, and high-converting websites for businesses. Let's work together to grow your digital presence.</p>
+      <div class="global-cta-buttons">
+        <a href="https://wa.me/27713465684" target="_blank" class="btn btn-primary">💬 Contact on WhatsApp</a>
+        <a href="business.html#contact" class="btn btn-secondary">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-block;">
+          <span>Hungry</span>Webs
+        </a>
+        <p>Premium web development agency designing and building state-of-the-art websites that drive sales, scale brands, and wow clients.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">FB</a>
+          <a href="#" class="footer-social-btn">IG</a>
+          <a href="#" class="footer-social-btn">TW</a>
+          <a href="#" class="footer-social-btn">LN</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="tshirt.html">E-Commerce Stores</a></li>
+          <li><a href="salon.html">Booking Calendars</a></li>
+          <li><a href="business.html">Corporate Consulting</a></li>
+          <li><a href="portfolio.html">Personal Portfolios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Examples</h4>
+        <ul class="footer-links">
+          <li><a href="iphone.html">iStore Reseller</a></li>
+          <li><a href="perfume.html">Perfume Boutique</a></li>
+          <li><a href="event.html">Event Tickets</a></li>
+          <li><a href="checkout.html">Checkout Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-contact">
+          <li>📧 hungrydevelopments@gmail.com</li>
+          <li>📱 0713465684 (WhatsApp)</li>
+          <li>📍 South Africa, Remote</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Hungry Webs. All rights reserved.</p>
+      <p>Made for showcase purposes.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/27713465684" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-drawer-close" id="closeCartDrawer">&times;</button>
+    </div>
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      <!-- Dynamically filled by main.js -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-drawer-total">
+        <span>Subtotal:</span>
+        <span id="cartDrawerSubtotal">R0.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Proceed to Checkout</a>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Shared Javascript -->
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Page Specific Logic -->
+  <script>
+    // Gallery Filtering
+    function filterGallery(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.portfolio-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.tag === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Skills Animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const skillFills = document.querySelectorAll('.skill-bar-fill');
+      setTimeout(() => {
+        skillFills.forEach(bar => {
+          bar.style.width = bar.dataset.width;
+        });
+      }, 300);
+    });
+
+    // Form Submit
+    document.getElementById('portfolioContactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('portName').value.trim();
+      const email = document.getElementById('portEmail').value.trim();
+      const message = document.getElementById('portMsg').value.trim();
+
+      if (name && email && message) {
+        showToast("Message sent to developer!");
+        document.getElementById('portfolioContactForm').reset();
+      } else {
+        showToast("Please fill in all fields.", true);
+      }
+    });
+  </script>
+</body>
+</html>

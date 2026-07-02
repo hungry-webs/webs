@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore NeonPulse Events: an event listings & ticket selling website showcase built by Hungry Webs.">
+  <title>NeonPulse Events - Ticket Selling Showcase | Hungry Webs</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/showcase.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span>Hungry</span>Webs
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">E-Commerce ↓</a>
+          <div class="nav-dropdown">
+            <a href="tshirt.html" class="nav-dropdown-link">T-Shirt Store</a>
+            <a href="iphone.html" class="nav-dropdown-link">iPhone Reseller</a>
+            <a href="perfume.html" class="nav-dropdown-link">Perfume Boutique</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">Showcases ↓</a>
+          <div class="nav-dropdown">
+            <a href="salon.html" class="nav-dropdown-link">Salon Booking</a>
+            <a href="event.html" class="nav-dropdown-link">Event Tickets</a>
+            <a href="business.html" class="nav-dropdown-link">Corporate Company</a>
+            <a href="portfolio.html" class="nav-dropdown-link">Personal Brand</a>
+          </div>
+        </div>
+        <a href="checkout.html" class="nav-link">Checkout</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-cart-btn" id="navCartBtn" title="View Cart">
+          🛒
+          <span class="nav-cart-count" style="display: none;">0</span>
+        </a>
+        <div class="hamburger" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Showcase Info Banner -->
+  <div style="background: rgba(6, 182, 212, 0.1); border-bottom: 1px solid rgba(6, 182, 212, 0.2); padding: 12px 0; text-align: center; font-size: 0.85rem; margin-top: var(--nav-height);">
+    <div class="container">
+      💡 <strong>DEMO SHIELD:</strong> This is a client-side mockup of an event ticketing website built by <strong>Hungry Webs</strong>. Try purchasing tickets and scanning them in the organizer dashboard below!
+    </div>
+  </div>
+
+  <!-- Showcase Header -->
+  <section class="showcase-header">
+    <div class="container">
+      <span class="badge badge-secondary">Event Ticket Platform</span>
+      <h1 class="text-gradient-purple" style="margin-top: 10px; background: linear-gradient(135deg, #FFF 0%, var(--secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">NEONPULSE EVENTS</h1>
+      <p>A high-energy ticketing, attendance scanner, and registration management system designed for festivals, summits, concerts, and venues.</p>
+    </div>
+  </section>
+
+  <!-- Event Showcase Hero -->
+  <section class="container">
+    <div class="event-hero" style="background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), radial-gradient(circle at center, rgba(6, 182, 212, 0.2) 0%, transparent 80%);">
+      <div class="event-hero-overlay"></div>
+      <div class="event-hero-content">
+        <span class="badge badge-accent" style="margin-bottom: 16px;">Featured Event</span>
+        <h2 style="font-size: 2.5rem; margin-bottom: 12px; font-family: var(--font-heading); color: #FFF;">CYBER BEATS FESTIVAL 2026</h2>
+        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 16px;">Experience the ultimate fusion of electronic music and immersive holographic lights. Featuring world-class DJs, visual arts, and tech arenas.</p>
+        <p style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">📅 Saturday, 25 July 2026 | 📍 Nexus Amphitheater, Johannesburg</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticketing Interface -->
+  <section class="container" id="orgClientView">
+    <div class="event-details-grid">
+      
+      <!-- Left: Ticket Selector -->
+      <div>
+        <h2 style="font-size: 1.5rem; margin-bottom: 24px; font-family: var(--font-heading);">1. Select Ticket Tier</h2>
+        
+        <div class="ticket-type-card active" data-tier="GA" data-price="150">
+          <div class="ticket-type-info">
+            <h3>General Admission (GA)</h3>
+            <p>Includes entry to festival grounds, main stages, and general food courts.</p>
+          </div>
+          <div class="ticket-purchase-action">
+            <div class="ticket-price">R150.00</div>
+            <span class="badge badge-secondary">Select</span>
+          </div>
+        </div>
+
+        <div class="ticket-type-card" data-tier="VIP" data-price="500">
+          <div class="ticket-type-info">
+            <h3>VIP Access Pass</h3>
+            <p>Includes front stage lounge access, private bars, VIP express entrance, and 2 free drinks vouchers.</p>
+          </div>
+          <div class="ticket-purchase-action">
+            <div class="ticket-price">R500.00</div>
+            <span class="badge badge-secondary">Select</span>
+          </div>
+        </div>
+
+        <!-- Form fields -->
+        <h2 style="font-size: 1.5rem; margin-top: 40px; margin-bottom: 24px; font-family: var(--font-heading);">3. Attendee Information</h2>
+        <div class="card-glass">
+          <div class="contact-form-group">
+            <label for="buyerName">Attendee Name</label>
+            <input type="text" class="contact-input" id="buyerName" placeholder="e.g. Elvis Presley">
+          </div>
+          <div class="contact-form-group" style="margin-bottom: 0;">
+            <label for="buyerEmail">Email for Ticket Delivery</label>
+            <input type="email" class="contact-input" id="buyerEmail" placeholder="e.g. elvis@gmail.com">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Quantity Selector & Summary -->
+      <div>
+        <h2 style="font-size: 1.5rem; margin-bottom: 24px; font-family: var(--font-heading);">2. Choose Quantity</h2>
+        
+        <div class="card-glass" style="display: flex; justify-content: space-between; align-items: center; padding: 24px;">
+          <span style="font-weight: 600;">Number of Tickets</span>
+          <div class="qty-control">
+            <button class="qty-btn" id="ticketDec">-</button>
+            <span class="qty-val" id="ticketQtyVal" style="width: 40px;">1</span>
+            <button class="qty-btn" id="ticketInc">+</button>
+          </div>
+        </div>
+
+        <!-- Cost display card -->
+        <div class="card-glass" style="margin-top: 30px; text-align: center; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.02);">
+          <div style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 6px;">Total Ticket Payable</div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--secondary); font-family: var(--font-heading);" id="ticketTotalAmount">R150.00</div>
+          <button class="btn btn-accent" id="btnBuyTicket" style="width: 100%; margin-top: 20px;">Purchase Ticket</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Organizer Dashboard Toggle -->
+  <section class="container">
+    <div class="dashboard-toggle-container">
+      <button class="dashboard-toggle-btn" id="toggleOrgBtn" style="border-color: var(--secondary); color: var(--secondary); background: rgba(6, 182, 212, 0.1);">⚙️ View Organizer Dashboard</button>
+    </div>
+
+    <!-- Organizer Console -->
+    <div class="mock-dashboard" id="orgDashboard" style="border-color: var(--secondary);">
+      <div class="dash-header">
+        <h2 style="color: var(--secondary);">📊 Event Organizer Control Room</h2>
+        <div class="dash-indicator" style="background: rgba(6, 182, 212, 0.1); color: var(--secondary);">
+          <span style="background: var(--secondary);"></span> Live Ticket Sales Sync
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="dash-stats-grid">
+        <div class="dash-stat-card">
+          <p>Total Ticket Revenue</p>
+          <div class="dash-stat-value" id="orgTotalSales">R1,650</div>
+        </div>
+        <div class="dash-stat-card">
+          <p>Tickets Sold (Capacity: 5000)</p>
+          <div class="dash-stat-value" id="orgTotalCount">4 Sold</div>
+        </div>
+        <div class="dash-stat-card">
+          <p>Gate Check-In Progress</p>
+          <div class="dash-stat-value" style="color: var(--secondary);" id="orgCheckinPercent">25% (1)</div>
+        </div>
+        <div class="dash-stat-card">
+          <p>VIP Tickets Sold</p>
+          <div class="dash-stat-value" style="color: var(--accent);">3 VIP</div>
+        </div>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="dash-content-grid">
+        <!-- Table -->
+        <div class="dash-table-wrapper">
+          <h3 style="margin-bottom: 16px; font-size: 1.1rem; color: var(--text-light);">Registered Ticketholders Log</h3>
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Attendee</th>
+                <th>Access Level</th>
+                <th>Qty</th>
+                <th>Revenue</th>
+                <th>Status</th>
+                <th>Gate Action</th>
+              </tr>
+            </thead>
+            <tbody id="orgTicketsBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+        <!-- Right side alerts -->
+        <div class="card-glass" style="padding: 20px;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 16px;">Gate Scanner Simulator</h3>
+          <ul style="font-size: 0.85rem; color: var(--text-muted); display:flex; flex-direction:column; gap:16px;">
+            <li>📲 <strong>Staff Scanner:</strong> Click the "Scan QR" button on active tickets to simulate a gate check-in entry.</li>
+            <li>🔒 <strong>Duplicate Protection:</strong> Restricts double entries automatically.</li>
+            <li>📊 <strong>Entry Metrics:</strong> Feeds real-time crowd safety statistics automatically.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global CTA Banner -->
+  <section class="global-cta-section">
+    <div class="container global-cta-content">
+      <h2>Need a Website Like This?</h2>
+      <p>We build professional, responsive, and high-converting websites for businesses. Let's work together to grow your digital presence.</p>
+      <div class="global-cta-buttons">
+        <a href="https://wa.me/27713465684" target="_blank" class="btn btn-primary">💬 Contact on WhatsApp</a>
+        <a href="business.html#contact" class="btn btn-secondary">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-block;">
+          <span>Hungry</span>Webs
+        </a>
+        <p>Premium web development agency designing and building state-of-the-art websites that drive sales, scale brands, and wow clients.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">FB</a>
+          <a href="#" class="footer-social-btn">IG</a>
+          <a href="#" class="footer-social-btn">TW</a>
+          <a href="#" class="footer-social-btn">LN</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="tshirt.html">E-Commerce Stores</a></li>
+          <li><a href="salon.html">Booking Calendars</a></li>
+          <li><a href="business.html">Corporate Consulting</a></li>
+          <li><a href="portfolio.html">Personal Portfolios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Examples</h4>
+        <ul class="footer-links">
+          <li><a href="iphone.html">iStore Reseller</a></li>
+          <li><a href="perfume.html">Perfume Boutique</a></li>
+          <li><a href="event.html">Event Tickets</a></li>
+          <li><a href="checkout.html">Checkout Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-contact">
+          <li>📧 hungrydevelopments@gmail.com</li>
+          <li>📱 0713465684 (WhatsApp)</li>
+          <li>📍 South Africa, Remote</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Hungry Webs. All rights reserved.</p>
+      <p>Made for showcase purposes.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/27713465684" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- Ticket Success Modal Overlay -->
+  <div class="modal-overlay" id="ticketModalOverlay">
+    <div class="modal-card" style="text-align: center;">
+      <span class="modal-close" id="ticketModalClose">&times;</span>
+      <div class="success-checkmark" style="border-color:var(--secondary); color:var(--secondary);">✓</div>
+      <h3 class="success-title" style="color:var(--secondary);">Tickets Issued!</h3>
+      <p class="success-message">Your digital ticket passes have been generated successfully:</p>
+      <div class="ticket-mock-container" id="ticketQRContainer">
+        <!-- Injected QR SVG -->
+      </div>
+      <div class="order-receipt-preview" id="ticketModalDetails" style="background: rgba(255, 255, 255, 0.02);">
+        <!-- Injected Details -->
+      </div>
+      <button class="btn btn-accent" style="width: 100%;" onclick="document.getElementById('ticketModalOverlay').classList.remove('active')">Close Ticket View</button>
+    </div>
+  </div>
+
+  <!-- Shared Javascript -->
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ticketing.js"></script>
+</body>
+</html>

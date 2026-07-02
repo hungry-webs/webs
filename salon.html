@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Aura Salon & Spa: a scheduling & appointment booking website showcase built by Hungry Webs.">
+  <title>Aura Salon & Spa - Booking Calendar Showcase | Hungry Webs</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/showcase.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span>Hungry</span>Webs
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">E-Commerce ↓</a>
+          <div class="nav-dropdown">
+            <a href="tshirt.html" class="nav-dropdown-link">T-Shirt Store</a>
+            <a href="iphone.html" class="nav-dropdown-link">iPhone Reseller</a>
+            <a href="perfume.html" class="nav-dropdown-link">Perfume Boutique</a>
+          </div>
+        </div>
+        <div class="nav-item-dropdown">
+          <a class="nav-link nav-dropdown-toggle">Showcases ↓</a>
+          <div class="nav-dropdown">
+            <a href="salon.html" class="nav-dropdown-link">Salon Booking</a>
+            <a href="event.html" class="nav-dropdown-link">Event Tickets</a>
+            <a href="business.html" class="nav-dropdown-link">Corporate Company</a>
+            <a href="portfolio.html" class="nav-dropdown-link">Personal Brand</a>
+          </div>
+        </div>
+        <a href="checkout.html" class="nav-link">Checkout</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-cart-btn" id="navCartBtn" title="View Cart">
+          🛒
+          <span class="nav-cart-count" style="display: none;">0</span>
+        </a>
+        <div class="hamburger" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Showcase Info Banner -->
+  <div style="background: rgba(139, 92, 246, 0.1); border-bottom: 1px solid var(--border-light); padding: 12px 0; text-align: center; font-size: 0.85rem; margin-top: var(--nav-height);">
+    <div class="container">
+      💡 <strong>DEMO SHIELD:</strong> This is a client-side mockup of a booking website built by <strong>Hungry Webs</strong>. Try scheduling an appointment and view the admin dashboard below!
+    </div>
+  </div>
+
+  <!-- Showcase Header -->
+  <section class="showcase-header">
+    <div class="container">
+      <span class="badge">Calendar Scheduling Platform</span>
+      <h1 class="text-gradient-purple" style="margin-top: 10px;">AURA SALON & SPA</h1>
+      <p>A sophisticated wellness scheduling system tailored for service-based businesses like spas, salons, medical clinics, and consultants.</p>
+    </div>
+  </section>
+
+  <!-- Main Booking Interface -->
+  <section class="container" id="salonClientView">
+    <div class="salon-booking-grid">
+      
+      <!-- Left: Services & Contact Form -->
+      <div>
+        <h2 style="font-size: 1.5rem; margin-bottom: 24px; font-family: var(--font-heading);">1. Select Services</h2>
+        
+        <div class="salon-services-list">
+          
+          <div class="salon-service-item" data-id="srv-1" data-name="Haircut & Blowdry" data-price="350">
+            <div class="salon-service-info">
+              <h3>Ladies Haircut & Blowdry</h3>
+              <p>Precision wash, cut, blow-dry finish and deep conditioning treatment.</p>
+            </div>
+            <div class="salon-service-price">
+              <span>R350.00</span>
+              <div class="salon-checkbox"></div>
+            </div>
+          </div>
+
+          <div class="salon-service-item" data-id="srv-2" data-name="Balayage & Styling" data-price="950">
+            <div class="salon-service-info">
+              <h3>Full Balayage & Styling</h3>
+              <p>Hand-painted highlights, custom toner, wash, and luxury waves styling.</p>
+            </div>
+            <div class="salon-service-price">
+              <span>R950.00</span>
+              <div class="salon-checkbox"></div>
+            </div>
+          </div>
+
+          <div class="salon-service-item" data-id="srv-3" data-name="Hydrating Facial" data-price="600">
+            <div class="salon-service-info">
+              <h3>Hydrating Glow Facial</h3>
+              <p>Organic chemical exfoliation, cooling mask, serum infusion, and facial massage.</p>
+            </div>
+            <div class="salon-service-price">
+              <span>R600.00</span>
+              <div class="salon-checkbox"></div>
+            </div>
+          </div>
+
+          <div class="salon-service-item" data-id="srv-4" data-name="Hot Stone Massage" data-price="850">
+            <div class="salon-service-info">
+              <h3>Aromatherapy Hot Stone Massage</h3>
+              <p>Full body deep tissue massage using heated basalt stones and premium lavender oils.</p>
+            </div>
+            <div class="salon-service-price">
+              <span>R850.00</span>
+              <div class="salon-checkbox"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <h2 style="font-size: 1.5rem; margin-top: 40px; margin-bottom: 24px; font-family: var(--font-heading);">3. Enter Details</h2>
+        <div class="card-glass">
+          <div class="contact-form-group">
+            <label for="clientName">Full Name</label>
+            <input type="text" class="contact-input" id="clientName" placeholder="e.g. Lerato Malepe">
+          </div>
+          <div class="contact-form-group">
+            <label for="clientEmail">Email Address</label>
+            <input type="email" class="contact-input" id="clientEmail" placeholder="e.g. lerato@gmail.com">
+          </div>
+          <div class="contact-form-group" style="margin-bottom: 0;">
+            <label for="clientPhone">WhatsApp Number</label>
+            <input type="tel" class="contact-input" id="clientPhone" placeholder="e.g. 0713465684">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Calendar & Time Slots -->
+      <div>
+        <h2 style="font-size: 1.5rem; margin-bottom: 24px; font-family: var(--font-heading);">2. Date & Time</h2>
+        
+        <!-- Calendar Widget -->
+        <div class="calendar-widget">
+          <div class="calendar-header">
+            <span class="calendar-month">July 2026</span>
+          </div>
+          <div class="calendar-grid" id="calendarGrid">
+            <!-- Labels -->
+            <div class="calendar-day-label">Su</div>
+            <div class="calendar-day-label">Mo</div>
+            <div class="calendar-day-label">Tu</div>
+            <div class="calendar-day-label">We</div>
+            <div class="calendar-day-label">Th</div>
+            <div class="calendar-day-label">Fr</div>
+            <div class="calendar-day-label">Sa</div>
+            <!-- Days injected by script -->
+          </div>
+
+          <!-- Time Slots -->
+          <div class="time-slots-section">
+            <div class="time-slots-header">Select Available Time Slot</div>
+            <div class="time-slots-grid">
+              <div class="time-slot" data-time="09:00">09:00 AM</div>
+              <div class="time-slot" data-time="10:30">10:30 AM</div>
+              <div class="time-slot" data-time="12:00">12:00 PM</div>
+              <div class="time-slot" data-time="13:30">01:30 PM</div>
+              <div class="time-slot" data-time="15:00">03:00 PM</div>
+              <div class="time-slot" data-time="16:30">04:30 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Total Summary Box -->
+        <div class="card-glass" style="margin-top: 30px; text-align: center; border-color: rgba(245, 158, 11, 0.2);">
+          <div style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 6px;">Total Booking Value</div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--accent); font-family: var(--font-heading);" id="bookingTotalValue">R0.00</div>
+          <button class="btn btn-gold" id="btnSubmitBooking" style="width: 100%; margin-top: 20px;">Book Appointment Now</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Admin Dashboard Access Panel -->
+  <section class="container">
+    <div class="dashboard-toggle-container">
+      <button class="dashboard-toggle-btn" id="toggleDashBtn">⚙️ View Live Admin Dashboard</button>
+    </div>
+
+    <!-- Hidden Mock Dashboard (Toggled via JS) -->
+    <div class="mock-dashboard" id="salonDashboard">
+      <div class="dash-header">
+        <h2>📊 AURA Salon Management Console</h2>
+        <div class="dash-indicator">
+          <span></span> Live Updates Enabled
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="dash-stats-grid">
+        <div class="dash-stat-card">
+          <p>Estimated Weekly Sales</p>
+          <div class="dash-stat-value" id="dashTotalSales">R1,900</div>
+        </div>
+        <div class="dash-stat-card">
+          <p>Total Scheduled Appointments</p>
+          <div class="dash-stat-value" id="dashTotalCount">3</div>
+        </div>
+        <div class="dash-stat-card">
+          <p>Pending Approvals</p>
+          <div class="dash-stat-value" style="color: var(--accent);" id="dashPendingCount">1</div>
+        </div>
+        <div class="dash-stat-card">
+          <p>Staff Capacity Used</p>
+          <div class="dash-stat-value" style="color: var(--secondary);">62%</div>
+        </div>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="dash-content-grid">
+        <!-- Table -->
+        <div class="dash-table-wrapper">
+          <h3 style="margin-bottom: 16px; font-size: 1.1rem; color: var(--text-light);">Upcoming Appointments Logs</h3>
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Apt ID</th>
+                <th>Client</th>
+                <th>Service(s)</th>
+                <th>Schedule</th>
+                <th>Value</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="dashAppointmentsBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+        <!-- Right side alerts -->
+        <div class="card-glass" style="padding: 20px;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 16px;">Automated Operations</h3>
+          <ul style="font-size: 0.85rem; color: var(--text-muted); display:flex; flex-direction:column; gap:16px;">
+            <li>🔔 <strong>Email Reminders:</strong> Sent automatically 24 hours prior to appointment.</li>
+            <li>💬 <strong>WhatsApp Integration:</strong> Auto-sends calendar link upon admin approval.</li>
+            <li>📊 <strong>CSV Exports:</strong> Click to download weekly booking registers.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global CTA Banner -->
+  <section class="global-cta-section">
+    <div class="container global-cta-content">
+      <h2>Need a Website Like This?</h2>
+      <p>We build professional, responsive, and high-converting websites for businesses. Let's work together to grow your digital presence.</p>
+      <div class="global-cta-buttons">
+        <a href="https://wa.me/27713465684" target="_blank" class="btn btn-primary">💬 Contact on WhatsApp</a>
+        <a href="business.html#contact" class="btn btn-secondary">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-block;">
+          <span>Hungry</span>Webs
+        </a>
+        <p>Premium web development agency designing and building state-of-the-art websites that drive sales, scale brands, and wow clients.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">FB</a>
+          <a href="#" class="footer-social-btn">IG</a>
+          <a href="#" class="footer-social-btn">TW</a>
+          <a href="#" class="footer-social-btn">LN</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="tshirt.html">E-Commerce Stores</a></li>
+          <li><a href="salon.html">Booking Calendars</a></li>
+          <li><a href="business.html">Corporate Consulting</a></li>
+          <li><a href="portfolio.html">Personal Portfolios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Examples</h4>
+        <ul class="footer-links">
+          <li><a href="iphone.html">iStore Reseller</a></li>
+          <li><a href="perfume.html">Perfume Boutique</a></li>
+          <li><a href="event.html">Event Tickets</a></li>
+          <li><a href="checkout.html">Checkout Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-contact">
+          <li>📧 hungrydevelopments@gmail.com</li>
+          <li>📱 0713465684 (WhatsApp)</li>
+          <li>📍 South Africa, Remote</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Hungry Webs. All rights reserved.</p>
+      <p>Made for showcase purposes.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/27713465684" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- Booking Success Modal Overlay -->
+  <div class="modal-overlay" id="bookingModalOverlay">
+    <div class="modal-card">
+      <span class="modal-close" id="bookingModalClose">&times;</span>
+      <div class="success-checkmark">✓</div>
+      <h3 class="success-title" style="text-align: center;">Appointment Scheduled!</h3>
+      <p class="success-message" style="text-align: center;">Your scheduling details are registered in our salon demo dashboard. See details below:</p>
+      <div class="ticket-mock-container" id="bookingModalDetails" style="text-align: left; border-style: solid; background: rgba(255, 255, 255, 0.02);">
+        <!-- Injected by script -->
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="document.getElementById('bookingModalOverlay').classList.remove('active')">Got It</button>
+    </div>
+  </div>
+
+  <!-- Shared Javascript -->
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
